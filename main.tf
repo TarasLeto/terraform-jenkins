@@ -10,10 +10,10 @@ terraform {
   required_version = ">= 1.2.5"
 }
 
-provider "aws" {
+provider "AWS" {
   region  = "us-east-1"
-  access_key = "my-access-key"
-  secret_key = "my-secret-key"
+  access_key = var.my-access-key
+  secret_key = var.my-secret-key
 }
 
 resource "aws_instance" "app_server" {
