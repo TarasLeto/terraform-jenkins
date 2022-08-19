@@ -1,7 +1,7 @@
-variable "access_key" {
+variable "access-key" {
     type = "AKIATZGP3ZVGBPJN4D6Q"
 }
-variable "secret_key" {
+variable "secret-key" {
     type = "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"
 	}
 	
