@@ -44,5 +44,5 @@ resource "aws_instance" "webserver1" {
 ]
   }
 }
-  
+}  
 
