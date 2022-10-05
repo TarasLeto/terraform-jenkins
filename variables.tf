@@ -1,10 +1,10 @@
 variable "my-access-key" {
     type= string
-	default = "AKIATZGP3ZVGBPJN4D6Q"
+	default = "AKIATZGP3ZVGCVEOZCPQ"
 }
 variable "my-secret-key" {
 	type= string
-   default = "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"
+   default = "/FCiCgzHoW+zteQSpCrjSdK/orIcp+mDmjLT6oVc"
 	}
 variable "image_id" {
   type        = string
