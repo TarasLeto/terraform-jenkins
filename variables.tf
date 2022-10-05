@@ -21,5 +21,5 @@ default ="my_terraform_key"
 }
 variable "privatekeypath" {
 	type = string
-	default ("./terrafrom-jenkins/my_terraform_key")
+	default= "./terrafrom-jenkins/my_terraform_key"
 }
