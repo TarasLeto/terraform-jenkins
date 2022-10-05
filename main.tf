@@ -3,17 +3,14 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.16"
+      region  = "us-east-1"
     }
   }
 
   required_version = ">= 1.2.0"
 }
 
-provider "aws" {
-  region  = "us-east-1"
-
-}
- resource "aws_instance" "webserver1" {
+resource "aws_instance" "webserver1" {
 
   ami             = var.image_id
   instance_type   = var.instance_type
