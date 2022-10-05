@@ -10,17 +10,16 @@ resource "aws_instance" "webserver1" {
     volume_type = "gp2"
     volume_size = "8"
     delete_on_termination = true
-
-  }
-}
-provisioner "remote-exec" {
-
-    connection {
+}     
+  
+ connection {
        type        = "ssh"
        user        = "ubuntu"
        private_key = file(var.privatekeypath)
        host        = self.public_ip
-      
+    }
+ 
+   provisioner "remote-exec" {
        inline = [
       "sudo apt-get update", 
       "sudo apt-get install \
