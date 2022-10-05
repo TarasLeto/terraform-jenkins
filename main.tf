@@ -22,10 +22,10 @@ resource "aws_instance" "webserver1" {
    provisioner "remote-exec" {
        inline = [
       "sudo apt-get update", 
-      "sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg \
+      "sudo apt-get install 
+    ca-certificates 
+    curl 
+    gnupg 
     lsb-release",
 
   "sudo mkdir -p /etc/apt/keyrings",
