@@ -1,25 +1,26 @@
 
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
+resource "aws_instance" "appserver1" {
+
+  ami             = var.imageid
+  instance_type   = var.instancetype
+  key_name        = var.key
+  security_groups = [aws_security_group.allow_all.name]
+
+
+  provisioner "remote-exec" {
+
+    connection {
+       type        = "ssh"
+       user        = "ubuntu"
+       private_key = file(var.privatekeypath)
+       host        = self.public_ip
     }
+
+    inline = [
+      "sudo apt-get update",
+      "sudo apt-get install tomcat7 -y"
+    ]
   }
-
-  required_version = ">= 1.2.5"
 }
-
-provider "aws" {
-  region  = "us-east-1"
-  access_key = var.my-access-key
-  secret_key = var.my-secret-key
-}
-
-resource "aws_instance" "app_server" {
-  ami           = "ami-0cff7528ff583bf9a"
-  instance_type = "t2.micro"
-  }
-  
   
 
