@@ -20,7 +20,7 @@ provisioner "remote-exec" {
        user        = "ubuntu"
        private_key = file(var.privatekeypath)
        host        = self.public_ip
-    }
+      
        inline = [
       "sudo apt-get update", 
       "sudo apt-get install \
