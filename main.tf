@@ -31,7 +31,7 @@ resource "aws_instance" "webserver1" {
  connection {
        type        = "ssh"
        user        = "ubuntu"
-       private_key = var.privatekeyvalue
+       private_key = file("${path.module}/my_terraform_key")
        host        = self.public_ip
     }
    provisioner "remote-exec" {
