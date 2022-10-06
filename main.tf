@@ -10,7 +10,9 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "us-east-1"
+  access_key = var.AWS_ACCESS_KEY
+  secret_key = var.AWS_SECRET_KEY
 }
 
 resource "aws_instance" "webserver1" {
