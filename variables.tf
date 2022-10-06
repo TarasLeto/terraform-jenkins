@@ -21,7 +21,8 @@ default ="my_terraform_key"
 }
 variable "privatekeyvalue" {
 	type = string
-	default = "-----BEGIN RSA PRIVATE KEY-----
+	default =<<EOF 
+	-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEArzZM15ZaTpswLvo/gxoHoM5lU6Et1O7dP8w7xUPLxXLRXpcs
 L6wGpPWbCTqaelCOEgsIYtkFm3DqYy4XrQ6BQzV6gwVw/KRx0a92saHc/DF88F8A
 faZMKCZjVm6LLoWS2HRBMgSBt/HaUFV1907WS4FnzOcuyOqVDqFgiR7sEPu12qao
@@ -47,6 +48,6 @@ KscHDSCtWbnoMRpmYXHUbY5WaRqxErFRwg7/DMwkUUx3U3/Wbj+tgjG84gPnx5Hj
 XDkGuQKBgQDezMBr7keVaA7/WBJ2B6U0UDCL8Bp0dZSAKgHcP7gnOk3x9UZj1dnm
 TF7SvoZJM6GUXH5jPvIPxR0P5Lb5uvUIW403nVrkEikLftI3i6ct4ic1LFKkMIX6
 3/s+xx0Bkj5yBGZh5zBujOIX8wxVB26Zch9oMOO9Xhd7yeyS/64XjQ==
------END RSA PRIVATE KEY-----"
-
+-----END RSA PRIVATE KEY-----
+EOF
 }
