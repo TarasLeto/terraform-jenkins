@@ -27,17 +27,13 @@ resource "aws_instance" "webserver1" {
     volume_size = "8"
     delete_on_termination = true
 }     
-  provisioner "file" {
-  source = "/my_terraform_key.pem"
-  destination = "/etc/my_terraform_key.pem"
   
  connection {
        type        = "ssh"
        user        = "ubuntu"
-       private_key = file("etc/my_terraform_key.pem")
+       private_key = file("var.privatekeypath")
        host        = self.public_ip
     }
-}
    provisioner "remote-exec" {
        inline = [
       "sudo apt-get update -y", 
