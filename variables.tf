@@ -9,7 +9,7 @@ variable "my_secret_key" {
 variable "image_id" {
   type        = string
   description = "The id of the machine image (AMI) to use for the server."
-	default = "ami-0f69dd1d0d03ad669"
+	default = "ami-08c40ec9ead489470"
 }
 variable "instance_type" {
 type = string 
