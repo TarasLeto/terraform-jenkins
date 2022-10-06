@@ -1,8 +1,8 @@
-variable "my-access-key" {
+variable "my_access_key" {
     type= string
 	default = "AKIATZGP3ZVGIQUWHTBQ"
 }
-variable "my-secret-key" {
+variable "my_secret_key" {
 	type= string
    default = "iEKuWUU4kkgpIsmeXreBjog0cna2Asj0nSDc25/Z"
 	}
