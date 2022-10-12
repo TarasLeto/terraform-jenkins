@@ -21,5 +21,5 @@ default ="my_terraform_key"
 }
 variable "keypath"{
 type =string
-default = "~./var/jenkins_home/workspace/terraform-test2_main/my_terraform_key.pem"
+default = "./var/jenkins_home/workspace/terraform-test2_main/my_terraform_key.pem"
 }
