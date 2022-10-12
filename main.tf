@@ -42,7 +42,8 @@ resource "aws_instance" "webserver1" {
   "sudo mkdir -p /etc/apt/keyrings",
   "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg",
   "sudo apt-get update -y",
-  "sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y",
+  "sudo apt install snapd -y",
+  "sudo snap install docker -y",
  "sudo service docker start",
  "sudo docker pull tarasleto96/gs-rest_service:lts",
  "sudo docker run -d -p 8080:8080  tarasleto96/gs-rest_service:lts"
