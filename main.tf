@@ -31,7 +31,7 @@ resource "aws_instance" "webserver1" {
  connection {
        type        = "ssh"
        user        = "ubuntu"
-       private_key = "${file("${var.keypath}")}"
+       private_key = file{var.keypath}
        host        = self.public_ip
     }
    provisioner "remote-exec" {
